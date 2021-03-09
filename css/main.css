@@ -766,8 +766,9 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-height: 582px;
+  min-height: 528px;
   min-width: 581px;
+  padding: 40px;
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -806,14 +807,12 @@ footer {
   text-align: center;
   color: var(--title-color);
   margin-bottom: 12px;
-  padding-top: 40px;
 }
 
 .form {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px;
 }
 
 .comment {
@@ -835,15 +834,20 @@ footer {
 }
 
 .form-field.accept {
-  display: inline-block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
-.form-field .accept-label {
+.text-agree {
+  font-family: inherit;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.714;
   margin-left: 9px;
+  margin-right: 2px;
 }
 
 .submit {
@@ -905,13 +909,23 @@ footer {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  transition: border 2550ms var(--cubic);
+  transition: border 250ms var(--cubic);
 }
 
 .check-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+
   border: 2px solid var(--title-color);
   border-radius: 4px;
   cursor: pointer;
+  transition: border 250ms var(--cubic);
+}
+
+.check-icon use {
+  display: none;
 }
 
 .checkbox:checked + .check-icon {
@@ -922,12 +936,13 @@ footer {
   display: block;
 }
 
-.accept-label {
-  display: flex;
-}
-
 .deal {
   color: var(--accent-color);
+  margin-left: 2px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
 }
 
 .input-wrapper {
