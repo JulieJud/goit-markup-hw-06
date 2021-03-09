@@ -791,6 +791,12 @@ footer {
   background-color: white;
   justify-content: center;
   align-items: center;
+  transition: fill 250ms var(--cubic);
+}
+
+.modal .closed:hover,
+.modal .closed:focus {
+  fill: var(--accent-color);
 }
 
 .formname {
@@ -810,11 +816,12 @@ footer {
   padding: 40px;
 }
 
-textarea {
+.comment {
   resize: none;
   border-radius: 4px;
   border: 1px solid var(--modal-border);
   padding: 12px 16px;
+  transition: border 250ms var(--cubic);
 }
 
 .form-field {
@@ -828,6 +835,7 @@ textarea {
 }
 
 .form-field.accept {
+  display: inline-block;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -835,6 +843,7 @@ textarea {
 .form-field .accept-label {
   font-size: 14px;
   line-height: 1.7;
+  margin-left: 9px;
 }
 
 .submit {
@@ -846,6 +855,7 @@ textarea {
   height: 50px;
   background-color: var(--accent-color);
   color: var(--bg-secondary-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   border: none;
   border-radius: 4px;
@@ -854,23 +864,33 @@ textarea {
   line-height: 1.8;
 }
 
-.form-field label {
+.form-field .label-form {
   margin-bottom: 4px;
-
   font-size: 12px;
   line-height: 1.16;
 }
 
-.form-field input {
+.form-field .input {
   width: 100%;
   border-radius: 4px;
   border: 1px solid var(--modal-border);
   min-width: 448px;
   min-height: 40px;
   padding-left: 40px;
+  transition: border 250ms var(--cubic);
 }
 
-.input:focus .icon-connect {
+.form-field .input:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.form-field .comment:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.input-wrapper .input:focus + .icon-connect {
   fill: var(--accent-color);
 }
 
@@ -880,8 +900,33 @@ textarea {
   line-height: 1.16;
 }
 
-.inp {
-  position: relative;
+.form-field .checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.icon-check {
+  border: 2px solid var(--title-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icon-check use {
+  display: none;
+}
+
+.icon-check:checked {
+  border: none;
+}
+
+.checkbox:checked ~ use {
+  display: block;
+}
+
+.deal {
+  color: var(--accent-color);
 }
 
 .input-wrapper {
