@@ -905,24 +905,25 @@ footer {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  transition: border 2550ms var(--cubic);
 }
 
-.icon-check {
+.check-icon {
   border: 2px solid var(--title-color);
   border-radius: 4px;
   cursor: pointer;
 }
 
-.icon-check use {
-  display: none;
-}
-
-.icon-check:checked {
+.checkbox:checked + .check-icon {
   border: none;
 }
 
-.checkbox:checked ~ use {
+.checkbox:checked + .check-icon use {
   display: block;
+}
+
+.accept-label {
+  display: flex;
 }
 
 .deal {
