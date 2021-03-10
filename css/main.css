@@ -689,10 +689,6 @@ footer {
   background-color: var(--accent-color);
 }
 
-.form-foter {
-  position: relative;
-}
-
 /*.foter-label {
   position: absolute;
   top: 50%;
@@ -707,6 +703,7 @@ footer {
   font-size: 16px;
   line-height: 1.25;
   padding-left: 15px;
+  color: var(--adressf-color);
 }
 
 .icon-send {
