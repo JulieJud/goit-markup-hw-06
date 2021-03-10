@@ -693,13 +693,20 @@ footer {
   position: relative;
 }
 
-.foter-label {
+/*.foter-label {
   position: absolute;
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
   font-size: 16px;
   line-height: 1.25;
+}*/
+
+.foterplaceholder {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.25;
+  padding-left: 15px;
 }
 
 .icon-send {
